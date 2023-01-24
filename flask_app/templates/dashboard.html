@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="body">
+    <div>
+<!-- Background image -->
+<div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/100.webp');
+    height: 100vh;
+  "
+><div>
+<!-- Background image -->
+    <div class="text-right p-2" >
+    <a href="/dashboard" class="btn btn-info">Home</a>
+    <a href="/post" class="btn btn-info ">Post</a>
+    <a href="/blogs" class="btn btn-info">Blog</a>
+
+    <a href="/new" class="btn btn-info">Vehicles Form</a>
+    <a href="/vehicles" class="btn btn-info"> Travel Vehicles</a>
+    <a href="/vote" class="btn btn-info">Vote</a>
+    <a href="/logout" class="btn btn-info text-center">Logout</a>
+    </div>
+    <h1 class="text-center text-light">Welcome {{user.first_name}}!!!</h1>
+    </div>
+    <div style="margin:auto;" class="text-center">
+        <h1 class="text-light">Take A Look At The World!!</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63658026.62883035!2d0.107675807334056!3d13.138565349452591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1searth%20!5e0!3m2!1sen!2sus!4v1674080185446!5m2!1sen!2sus" width="1000" height="600" style="border:0" allowfullscreen="align-items-center" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="justify-content-center" >World Map</iframe>
+        <h1 class="text-light">Go Vote for Best Travel Location!</h1>
+    <a href="/vote" class="btn btn-info">Vote Here!</a>
+    </div>
+</div>
+</body>
+
+</html>

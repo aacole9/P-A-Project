@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE UPDATE UPDATE!!!!!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/33.webp');
+    height: 100vh;
+  "
+>
+<div class="text-right p-2" >
+  <a href="/dashboard" class="btn btn-info">Home</a>
+  <a href="/post" class="btn btn-info ">Post</a>
+  <a href="/blogs" class="btn btn-info">Blog</a>
+  <a href="/new" class="btn btn-info">Vehicles Form</a>
+  <a href="/vehicles" class="btn btn-info"> Travel Vehicles</a>
+  <a href="/vote" class="btn btn-info">Vote</a>
+  <a href="/logout" class="btn btn-info text-center">Logout</a>
+
+  </div>
+<div>
+  <body>
+    <div class="container text-center">
+        <p>
+        <h1>Edit {{newer.type }}</h1>
+        </p>
+    <form action="/edit/{{newer.id}}/new_db" method="post">
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+                {%for message in messages%}
+                    <p>{{message}}</p>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
+    <div class="container text-center form-group">
+        <label for="type" class="type">Type:</label>
+        <input type="text" name="type" id="type" value= "{{newer.type}}">
+    </div>
+    <div class="container text-center form-group" >
+        <label for="safety" class="safety">Safety:</label>
+        <input type="text" name="safety" id="safety" value="{{newer.safety}}">
+    </div>
+    </div>
+    <div class="container text-center form-group">
+        <label for="year">Year:</label>
+        <input type="number" name="year" id="year" value="{{newer.year}}">
+    </div>
+    <div class="container text-center form-group">
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" cols="25" rows="5">{{newer.description}}</textarea>
+    </div>
+    <input type="submit" value="Update" class="btn btn-info text-center">
+    </form>
+    
+</body>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/67.webp');
+    height: 100vh;
+  "
+>
+<div class="text-right p-2" >
+    <a href="/dashboard" class="btn btn-info">Home</a>
+    <a href="/post" class="btn btn-info ">Post</a>
+    <a href="/blogs" class="btn btn-info">Blog</a>
+
+    <a href="/new" class="btn btn-info">Vehicles Form</a>
+    <a href="/vehicles" class="btn btn-info"> Travel Vehicles</a>
+    <a href="/vote" class="btn btn-info">Vote</a>
+    <a href="/logout" class="btn btn-info text-center">Logout</a>
+    </div>
+<div>
+    <div class="d-flex justify-content-around">
+    <form action="/blogs/to_db" method="post" class="bg-image text-primary text" >
+        <h2 class="text-primary">Make a post!</h2>
+
+        <div class="form-group">
+            <label for="Location">Location:</label>
+            <input type="text" name="Location" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Rating">Rating on Experience: (1-10)</label>
+            <input type="number" max="10" name="Rating" id="Rating" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Date">Date:</label>
+            <input type="date" name="Date" id="Date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Post">Post:</label>
+            <textarea name="Post" id="Post" cols="60" rows="10" class="form-control"></textarea>
+        </div>
+        <input type="submit" value="POST" class="btn btn-primary">
+    </form>
+    
+</body>
+</html>

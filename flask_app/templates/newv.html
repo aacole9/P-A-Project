@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Vehicle for Travel</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head> 
+<body>
+    <div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/4.webp');
+    height: 100vh;
+  "
+>
+<body>
+    <div class="text-right p-2" >
+        <a href="/dashboard" class="btn btn-success">Home</a>
+        <a href="/post" class="btn btn-success ">Post</a>
+        <a href="/blogs" class="btn btn-success">Blog</a>
+        <a href="/new" class="btn btn-success">Vehicles Form</a>
+        <a href="/vehicles" class="btn btn-success"> Travel Vehicles</a>
+        <a href="/vote" class="btn btn-success">Vote</a>
+        <a href="/logout" class="btn btn-success text-center">Logout</a>
+
+        </div>
+        <h1 class="text-center text-light">WHAT DID YOU TRAVEL ON???</h1>
+        <div class="d-flex justify-content-center p-3" >
+    <form action='/new/vehicle/to_db' method="post" class="bg-image text-light text">
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+                {%for message in messages%}
+                    <p>{{message}}</p>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
+    <div class="form-group">
+        <label for="type" class="type">Type:</label>
+        <input type="text" name="type" id="type" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="model" class="safety">Safety:</label>
+        <input type="safety" name="safety" id="safety" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="year" name="year" id="year" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="description" style="text-align:justify;">Description:</label>
+        <textarea name="description" id="description" cols="50" rows="5" class="form_control"></textarea>
+    </div>
+    <input type="submit" value="Post" class="btn btn-success">
+    </form>
+        </div>
+</body>
+</html>

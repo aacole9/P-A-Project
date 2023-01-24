@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/33.webp');
+    height: 100vh;
+  "
+>
+  <div class="text-right p-2" >
+    <a href="/dashboard" class="btn btn-info">Home</a>
+    <a href="/post" class="btn btn-info ">Post</a>
+    <a href="/blogs" class="btn btn-info">Blog</a>
+    <a href="/new" class="btn btn-info">Vehicles Form</a>
+    <a href="/vehicles" class="btn btn-info"> Travel Vehicles</a>
+    <a href="/vote" class="btn btn-info">Vote</a>
+    <a href="/logout" class="btn btn-info text-center">Logout</a>
+
+    </div>
+    <h1 class="text-light">Recently Posted:</h1>
+    <table class="table table-dark table-striped text-center" >
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Rating Experience</th>
+                <th>Date</th>
+                <th>Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for newed in new_system %}
+                <tr>
+                    <td>{{ newed.Location }}</td>
+                    <td>{{ newed.Rating }}</td>
+                    <td>{{ newed.Date}}</td>
+                    <td>{{newed.Post}}</td>
+                    <td>
+                        <tr>
+                        {% if newed.user.id == session["user_id"]%}
+                        <td><a href="/blogs/edit/{{newed.id}}" class="btn btn-info p-2">Edit</a></td>
+                        <td><a href="/blog/delete/{{newed.id}}" class="btn btn-info p-2">Delete</a></td>
+                        {%endif%}
+                    </tr>
+                    </td>
+                </tr>
+            {%endfor%}
+
+        </tbody>
+    </table>
+</body>
+</html>
